@@ -19,5 +19,7 @@ jobs:
       uses: nicozink/github-build-actions@master
       with:
         who-to-greet: 'Mona the Octocat'
+        os: matrix.os
+        type: matrix.type
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}, running ${{ matrix.type }} on ${{ steps.hello.outputs.os }}"
